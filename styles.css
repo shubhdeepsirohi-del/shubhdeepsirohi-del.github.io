@@ -15,3 +15,7 @@
 .business-chat-header a{color:#80d5fa;text-decoration:underline}
 .business-chat-panel iframe{display:block;width:100%;flex:1;min-height:0;border:0;background:#fff}
 @media(max-width:540px){.business-chat{right:16px;bottom:16px}}
+
+/* Nanak Automations wordmark. */
+.wordmark{display:inline-block;justify-self:start;font-size:25px;line-height:1;letter-spacing:-.04em}
+.wordmark span{display:block;margin-top:5px;font-size:11px;line-height:1.2;letter-spacing:.14em;text-transform:uppercase}
