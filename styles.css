@@ -16,6 +16,15 @@
 .business-chat-panel iframe{display:block;width:100%;flex:1;min-height:0;border:0;background:#fff}
 @media(max-width:540px){.business-chat{right:16px;bottom:16px}}
 
-/* Nanak Automations wordmark. */
+/* Sirohi Automation wordmark. */
 .wordmark{display:inline-block;justify-self:start;font-size:25px;line-height:1;letter-spacing:-.04em}
 .wordmark span{display:block;margin-top:5px;font-size:11px;line-height:1.2;letter-spacing:.14em;text-transform:uppercase}
+
+/* Sirohi Automation logo lockup. */
+.wordmark{display:flex;align-items:center;gap:11px}
+.wordmark .brand-icon{display:block;flex:none;width:48px;height:48px;object-fit:contain;background:#07162f;border-radius:10px}
+.wordmark .brand-text{display:block;margin:0;color:var(--ink);font-size:25px;line-height:1;letter-spacing:-.04em;text-transform:none}
+.wordmark .brand-text>span{margin-top:5px;color:#0b74bd;font-size:10px;line-height:1.2;letter-spacing:.15em;text-transform:uppercase}
+.about-mark{background:#07162f;overflow:hidden}
+.about-mark img{display:block;width:100%;height:auto;object-fit:contain}
+@media(max-width:540px){.site-header{grid-template-columns:auto 1fr;column-gap:12px}.wordmark{gap:8px}.wordmark .brand-icon{width:40px;height:40px}.wordmark .brand-text{font-size:22px}.wordmark .brand-text>span{font-size:9px}.header-cta{font-size:12px}}
