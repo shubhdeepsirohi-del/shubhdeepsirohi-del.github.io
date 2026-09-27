@@ -39,7 +39,7 @@
 @media(max-width:540px){.plans-hero{width:calc(100% - 28px);padding:60px 0 38px}.plans-hero h1{font-size:52px}.plans-section{padding-bottom:70px}.plans-table th,.plans-table td{padding:15px}.plans-cta{padding:30px 24px}}
 </style>
 </head>
-<body>
+<body><div class="page-noise" aria-hidden="true"></div>
 <a class="skip-link" href="#main">Skip to content</a>
 <header class="site-header">
 <a class="wordmark" href="index.html"><img class="brand-icon" src="sirohis-automation-logo.svg" alt="" width="48" height="48"><span class="brand-text">Sirohi’s<span>Automation</span></span></a>
@@ -91,5 +91,17 @@
 </section>
 </main>
 <footer><span>© 2026 Sirohi's Automation · Shubhdeep Sirohi · India</span><div><a href="plans.html">Compare plans</a><a href="https://calendly.com/shubhdeepsirohi/30min" target="_blank" rel="noopener noreferrer">Book a call</a><a href="https://www.linkedin.com/in/shubhdeep-sirohi-b2a466288/">LinkedIn ↗</a><a href="https://github.com/shubhdeepsirohi-del">GitHub ↗</a></div></footer>
-</body>
+<div class="scroll-progress" aria-hidden="true"><i></i></div><div class="cursor-glow" aria-hidden="true"></div><script>
+(() => {
+  const progress=document.querySelector('.scroll-progress i');
+  const glow=document.querySelector('.cursor-glow');
+  const revealables=[...document.querySelectorAll('main section, .demo-card, .journey article, .capability-grid article, .principles article, .faq-list details, .plans-table-wrap, .plans-cta')];
+  revealables.forEach((el,i)=>{el.classList.add('reveal'); if(i%5===1)el.classList.add('reveal-delay-1'); if(i%5===2)el.classList.add('reveal-delay-2'); if(i%5===3)el.classList.add('reveal-delay-3');});
+  const io=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in-view');io.unobserve(e.target)}}),{threshold:.12,rootMargin:'0px 0px -8% 0px'});
+  revealables.forEach(el=>io.observe(el));
+  const update=()=>{const h=document.documentElement.scrollHeight-innerHeight; progress.style.width=(h>0?(scrollY/h)*100:0)+'%';};
+  addEventListener('scroll',update,{passive:true}); update();
+  addEventListener('pointermove',e=>{if(glow){glow.style.opacity='.75';glow.style.left=e.clientX+'px';glow.style.top=e.clientY+'px';}},{passive:true});
+})();
+</script></body>
 </html>
