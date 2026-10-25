@@ -22,7 +22,7 @@
 
 /* Sirohi Automation logo lockup. */
 .wordmark{display:flex;align-items:center;gap:11px}
-.wordmark .brand-icon{display:block;flex:none;width:48px;height:48px;object-fit:contain;background:#07162f;border-radius:10px}
+.wordmark .brand-icon{display:block;flex:none;width:48px;height:48px;object-fit:contain;background:transparent;border-radius:0}
 .wordmark .brand-text{display:block;margin:0;color:var(--ink);font-size:25px;line-height:1;letter-spacing:-.04em;text-transform:none}
 .wordmark .brand-text>span{margin-top:5px;color:#0b74bd;font-size:10px;line-height:1.2;letter-spacing:.15em;text-transform:uppercase}
 .about-mark{background:#07162f;overflow:hidden}
@@ -256,9 +256,9 @@ footer a:hover{color:#278bc8}
 @media(max-width:800px){.site-header{width:calc(100% - 32px)}.demos-hero,.plans-hero{width:calc(100% - 36px);padding:70px 0 48px}.demo-grid{width:calc(100% - 32px);gap:20px;margin-bottom:75px}.demo-card{grid-template-columns:1fr}.demo-card video{border-radius:0 0 27px 27px;max-height:none;min-height:220px}.plans-section{padding-left:16px;padding-right:16px}.demos-closing{padding:75px 22px}footer{padding:25px 20px;gap:15px;flex-wrap:wrap}}
 
 
-/* Final brand lockup: SA monogram beside the existing Sirohi's Automation wordmark */
-.site-header .wordmark{display:flex;align-items:center;gap:16px;text-decoration:none;flex-shrink:0}
-.site-header .brand-icon{display:block;width:68px;height:68px;flex:0 0 68px;object-fit:contain;filter:drop-shadow(0 7px 14px rgba(29,73,120,.13))}
-.site-header .brand-text{display:block;color:#07162b;font-size:clamp(25px,3vw,34px);font-weight:900;letter-spacing:-.065em;line-height:.94}
-.site-header .brand-text span{display:block;margin-top:8px;color:#147bc0;font-size:clamp(11px,1.35vw,15px);font-weight:850;letter-spacing:.17em;line-height:1.1;text-transform:uppercase}
-@media(max-width:540px){.site-header .wordmark{gap:10px}.site-header .brand-icon{width:48px;height:48px;flex-basis:48px}.site-header .brand-text{font-size:23px}.site-header .brand-text span{font-size:10px;letter-spacing:.14em;margin-top:5px}}
+/* Restore original logo sizing and let the original logo artwork render unchanged. */
+.site-header .wordmark{display:flex;align-items:center;gap:12px;text-decoration:none;flex-shrink:0}
+.site-header .brand-icon{display:block;width:48px;height:48px;flex:0 0 48px;object-fit:contain;background:transparent;border-radius:0;filter:none}
+.site-header .brand-text{display:block;color:#07162b;font-size:25px;font-weight:900;letter-spacing:-.08em;line-height:1}
+.site-header .brand-text span{display:block;margin-top:5px;color:#147bc0;font-size:11px;font-weight:850;letter-spacing:.17em;line-height:1.1;text-transform:uppercase}
+@media(max-width:540px){.site-header .wordmark{gap:8px}.site-header .brand-icon{width:40px;height:40px;flex-basis:40px}.site-header .brand-text{font-size:22px}.site-header .brand-text span{font-size:9px;letter-spacing:.14em;margin-top:4px}}
