@@ -94,3 +94,18 @@ body::before{content:"";position:fixed;inset:0;pointer-events:none;opacity:.28;b
 @keyframes pulse-dot{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.45;transform:scale(.8)}}@keyframes travel{0%{opacity:.15;transform:translateX(-3px)}50%{opacity:1;transform:translateX(3px)}100%{opacity:.15;transform:translateX(-3px)}}@keyframes scan{to{transform:translateX(100%)}}@keyframes float-chip{0%,100%{transform:translateY(0)}50%{transform:translateY(-8px)}}
 @media(max-width:850px){.hero{min-height:auto}.flow-visual{grid-template-columns:1fr;gap:8px}.flow-connector{transform:rotate(90deg);height:18px}.chip-top{right:5px;top:80px}.chip-bottom{left:5px;bottom:80px}.orbit-one{right:-260px}.orbit-two{right:-360px}}
 @media(prefers-reduced-motion:reduce){.live-dot,.flow-connector i,.signal-bar::after,.floating-chip{animation:none}.system-card,.demo-card{transition:none}}
+
+
+/* Strategy points from the website brief */
+.strategy-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));border:1px solid #bfd0e5;background:#fff}
+.strategy-grid article{min-height:300px;padding:30px;border-right:1px solid #bfd0e5;display:flex;flex-direction:column;align-items:flex-start}
+.strategy-grid article:last-child{border-right:0}
+.strategy-grid article>span{font-size:10px;font-weight:900;letter-spacing:.12em;color:#0b74bd}
+.strategy-grid h3{margin:45px 0 13px;font-size:clamp(22px,2.4vw,30px);line-height:1.08;letter-spacing:-.035em}
+.strategy-grid p{margin:0;color:#496078;line-height:1.65}
+.strategy-grid small{display:block;margin-top:auto;padding-top:22px;color:#667d95;line-height:1.5;font-size:11px}
+.brand-icon{display:block;width:48px;height:48px;object-fit:contain}
+.wordmark{display:flex;align-items:center;gap:10px;letter-spacing:normal}
+.brand-text{font-size:23px;font-weight:900;letter-spacing:-.07em;line-height:.95}
+.brand-text span{display:block;margin-top:4px;font-size:15px;letter-spacing:-.04em}
+@media(max-width:850px){.strategy-grid{grid-template-columns:1fr}.strategy-grid article{min-height:0;border-right:0;border-bottom:1px solid #bfd0e5;padding:28px}.strategy-grid article:last-child{border-bottom:0}.strategy-grid h3{margin:28px 0 12px}.strategy-grid small{margin-top:20px}}
